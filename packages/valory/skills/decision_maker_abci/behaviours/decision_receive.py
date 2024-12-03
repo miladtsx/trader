@@ -420,7 +420,7 @@ class DecisionReceiveBehaviour(DecisionMakerBaseBehaviour):
         self, prediction_response: PredictionResponse
     ) -> Generator[None, None, Tuple[bool, int]]:
         """Whether the decision is profitable or not."""
-        if prediction_response.vote is None:
+        if True:
             return False, 0
 
         if self.benchmarking_mode.enabled:

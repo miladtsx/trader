@@ -8,7 +8,7 @@ license: Apache-2.0
 fingerprint:
   README.md: bafybeibg7bdqpioh4lmvknw3ygnllfku32oca4eq5pqtvdrdsgw6buko7e
 fingerprint_ignore_patterns: []
-agent: valory/trader:0.1.0:bafybeibrpyaz6l4rdcfkdmngh54kmqkxxfkb35clukyccvhupvqs5qcixq
+agent: valory/trader:0.1.0:bafybeieznhmj7735hhgkyzdq7iryrmyt4ncjsbejnuoiqt6crkqkyehqpa
 number_of_agents: 1
 deployment:
   agent:
@@ -52,8 +52,8 @@ models:
       mech_wrapped_native_token_address: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d'
       mech_activity_checker_contract: ${MECH_ACTIVITY_CHECKER_CONTRACT:str:0x155547857680A6D51bebC5603397488988DEb1c8}
       sample_bets_closing_days: 10
-      trading_strategy: kelly_criterion
-      use_fallback_strategy: true
+      trading_strategy: always_no
+      use_fallback_strategy: false
       bet_threshold: 100000000000000000
       ipfs_address: https://gateway.autonolas.tech/ipfs/
       tools_accuracy_hash: QmR8etyW3TPFadNtNrW54vfnFqmh8vBrMARWV76EmxCZyk
@@ -82,7 +82,7 @@ models:
       tool_punishment_multiplier: 1
       redeem_round_timeout: 3600.0
       contract_timeout: 300.0
-      file_hash_to_strategies_json: ${FILE_HASH_TO_STRATEGIES_JSON:list:[["bafybeihufqu2ra7vud4h6g2nwahx7mvdido7ff6prwnib2tdlc4np7dw24",["bet_amount_per_threshold"]],["bafybeif55cu7cf6znyma7kxus4wxa2doarhau2xmndo57iegshxorivwmq",["kelly_criterion"]]]}
+      file_hash_to_strategies_json: ${FILE_HASH_TO_STRATEGIES_JSON:list:[["bafybeihufqu2ra7vud4h6g2nwahx7mvdido7ff6prwnib2tdlc4np7dw24",["bet_amount_per_threshold"]],["bafybeif55cu7cf6znyma7kxus4wxa2doarhau2xmndo57iegshxorivwmq",["kelly_criterion"]],["bafybeihnovet7ueuvebx5zdcsey7wk2q3g3noeqcanzurnlcoswel6zofq",["always_no"]]]}
       mech_to_subscription_params: ${SUBSCRIPTION_PARAMS:list:[["base_url", "https://marketplace-api.gnosis.nevermined.app/api/v1/metadata/assets/ddo"],
         ["did", "did:nv:0ea01d5de3b34e3792db825f2a5f5595c393c68b19fd5efdacd00fcc63a53483"],
         ["escrow_payment_condition_address", "0x9dDC4F1Ea5b94C138A23b60EC48c0d01d172629a"],
